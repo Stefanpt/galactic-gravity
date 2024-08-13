@@ -1,53 +1,61 @@
 ---
 import { Picture } from "astro:assets";
 import heroImage from "assets/hero.png";
-import Link from "@components/ui/link.astro";
+import trees from "assets/trees.png";
+import Button from "@components/ui/button.astro";
 import { Icon } from "astro-icon/components";
+import Container from "./container.astro";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={heroImage}
-      alt="Astronaut in the air"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-    />
-  </div>
-  <div>
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
-    </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly
-      create any website with this starter.
-    </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+  class="flex bg-black bg-hero-bg bg-cover bg-bottom bg-no-repeat"
+>
 
-         Download for Free
-      </Link>
-      <Link
-        size="lg"
-        style="outline"
-        rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-         GitHub Repo
-      </Link>
+  <Container>
+
+    <!-- col 1 -->
+    <div class="flex flex-col place-content-center p-20 w-1/2">
+      <p
+        class="text-white text-mingo-text text-sm font-medium font-body tracking-widest uppercase"
+      >the web3 ticketing solution</p>
+      <h1
+        class="text-5xl text-white text-transform font-display lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+        MINGO<br/>TICKETS
+      </h1>
+      <p class="text-lg mt-4 text-mingo-text font-body max-w-xl">
+        Transform your event experience with MINGO Ticket. Buy, store, and manage NFT-based tickets on one secure platform. Effortlessly transfer or trade your tickets with unparalleled ease and security.
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <Button
+          style="primary"
+          size="lg"
+          class="flex gap-1 items-center justify-center"
+        >
+          Install App
+          <Icon class="text-white w-5 h-5" name="bx:down-arrow-circle" />
+        </Button>
+        <Button
+          style="outline"
+          size="lg"
+          class="flex gap-1 items-center justify-center"
+        >
+          View Features
+        </Button>
+      </div>
     </div>
-  </div>
+    
+    <!-- col 2 -->
+    <div class="flex flex-col place-content-center p-20 w-1/2">
+      <Picture
+        src={heroImage}
+        alt="Astronaut in the air"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 800px) 100vw, 620px"
+        loading="eager"
+        format="avif"
+      />
+    </div>
+
+  </Container>
+
 </main>

@@ -1,19 +1,158 @@
-<footer class="my-20">
-  <p class="text-center text-sm text-slate-500">
-    Copyright © {new Date().getFullYear()} Astroship. All rights reserved.
-  </p>
-  <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
-  <p class="text-center text-xs text-slate-500 mt-1">
-    Made by <a
-      href="https://web3templates.com"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline">
-      Web3Templates
-    </a>
-  </p>
-</footer>
+---
+import { Image } from "astro:assets";
+import logowhite from "assets/logo-white.svg"
+import playstore from "assets/playstore.png"
+import appstore from "assets/appstore.png"
+import { Icon } from "astro-icon/components";
+---
+
+<div class="mt-8 bg-mingo-dark pt-9">
+  <div class="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
+
+    <!-- Columns -->
+    <div class="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
+
+      <!-- Col 1 -->
+      <div class="md:w-80">
+        <Image src={logowhite} alt="Mingo Logo" class="w-16" />
+        <div class="">
+          <ul>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav text-sm font-normal hover:font-semibold"
+                href="/"
+              >
+                About Mingo
+              </a>
+            </li>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav text-sm font-normal hover:font-semibold"
+                href="/our-tutors"
+              >
+                Legal
+              </a>
+            </li>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav text-sm font-normal hover:font-semibold"
+                href="/become-a-tutor"
+              >
+                White Paper
+              </a>
+            </li>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav text-sm font-normal hover:font-semibold"
+                href="/plans-and-pricing"
+              >
+                Contact Us
+              </a>
+            </li>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav hover:text-mingo-text-nav/80 font-inter text-[15px] font-normal hover:font-semibold"
+                href="/terms-and-conditions"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav hover:text-mingo-text-nav/80 font-inter text-[15px] font-normal hover:font-semibold"
+                href="/terms-and-conditions"
+              >
+                Support@mingoapps.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="md:w-80">
+          <p class="text-white text-sm font-semibold">Features</p>
+          <ul>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav hover:text-mingo-text-nav/80 font-inter text-[15px] font-normal hover:font-semibold"
+                href="/"
+              >
+                MingoChat
+              </a>
+            </li>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav hover:text-mingo-text-nav/80 font-inter text-[15px] font-normal hover:font-semibold"
+                href="/our-tutors"
+              >
+                MingoWallet
+              </a>
+            </li>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav hover:text-mingo-text-nav/80 font-inter text-[15px] font-normal hover:font-semibold"
+                href="/become-a-tutor"
+              >
+                MingoMarket
+              </a>
+            </li>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav hover:text-mingo-text-nav/80 font-inter text-[15px] font-normal hover:font-semibold"
+                href="/plans-and-pricing"
+              >
+                MingoLaunch
+              </a>
+            </li>
+            <li class="mt-[15px]">
+              <a
+                class="text-mingo-text-nav hover:text-mingo-text-nav/80 font-inter text-[15px] font-normal hover:font-semibold"
+                href="/terms-and-conditions"
+              >
+                MingoPlay
+              </a>
+            </li>
+          </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="md:w-80">
+        <p class="text-white text-sm font-semibold pb-4">Address</p>
+        <p class="text-mingo-text-nav text-sm pb-6">
+          Mingo Ventures LLC, First Floor, SVG Teachers Credit Union Uptown Building, Corner of James & Middle Street Kingston P.O. St. Vincent & the Grenadines
+        </p>
+        <p class="text-white text-sm font-semibold pb-4">Social</p>
+        <div class="flex gap-4">
+          <a href="#" class="text-mingo-text-nav text-sm">
+            <Icon class="text-white w-6 h-6" name="skill-icons:discord" />
+          </a>
+          <a href="#" class="text-mingo-text-nav text-sm">
+            <Icon class="text-white w-6 h-6" name="ri:twitter-x-line" />
+          </a>
+          <a href="#" class="text-mingo-text-nav text-sm">
+            <Icon class="text-white w-6 h-6" name="skill-icons:instagram" />
+          </a>
+        </div> 
+      </div>
+
+      <!-- Col 4 -->
+      <div class="md:w-80 px-10">
+          <p class="text-white text-sm font-semibold pb-4">Download the app</p>
+          <div class="flex gap-4 sm:flex-col">
+            <Image src={playstore} alt="Mingo Logo" class="w-40" />
+            <Image src={appstore} alt="Mingo Logo" class="w-40" />
+          </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="flex items-center justify-center pb-8 pt-[9px] md:py-8">
+      <p class="text-[10px] font-normal text-[#666] md:text-[12px]">
+        © Copyright 2024, All Rights Reserved Mingo pty (LTD)
+      </p>
+    </div>
+
+  </div>
+</div>

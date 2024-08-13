@@ -5,13 +5,32 @@ import Features from "@components/features.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
+import CategoriesSmall from "@components/categories-small.astro";
+import Newsletter from "@components/newsletter.astro";
+import Picture from "astro/components/Picture.astro";
+import { getCollection } from "astro:content";
+import Carousel from "@components/carousel.astro";
+
+// Filter blog entries with 'draft: false' & date before current date
+const publishedEvents = await getCollection("event", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
 ---
 
 <Layout title="">
-  <Container>
     <Hero />
-    <Features />
-    <Logos />
+    <CategoriesSmall />
+
+    <main class="mt-32">
+
+        <div class="max-w-6xl mx-auto">
+            <Carousel items={publishedEvents} />
+        </div>
+
+        <!-- Featured events x2 -->
+
+    </main>
+
     <Cta />
-  </Container>
+    <Newsletter />
 </Layout>
