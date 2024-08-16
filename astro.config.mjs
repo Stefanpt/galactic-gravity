@@ -6,7 +6,8 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
+  site: "https://Stefanpt.github.io/",
+  base: '/galactic-gravity',
   integrations: [tailwind(), mdx(), sitemap(), icon()],
   image: {
     service: passthroughImageService(),
