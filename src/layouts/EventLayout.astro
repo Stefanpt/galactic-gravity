@@ -11,18 +11,8 @@ console.log(event['data'])
 <Layout title={event.data.title}>
   <div class="mx-auto max-w-[735px] p-10">
     <div class="mx-auto mt-14">
-      <picture>
-        <source
-          srcset={event.data.image.srcset}
-          sizes="(max-width: 800px) 100vw, 800px"
-        />
-        <img
-          src={event.data.image.src}
-          alt={event.data.image.alt}
-          class="w-full object-cover object-center bg-white"
-        />
-      </picture>
-      <!-- <Picture
+      <Picture
+        class="w-full object-cover object-center bg-white"
         src={event.data.image.src}
         alt="Astronaut in the air"
         widths={[200, 400, 600]}
@@ -30,10 +20,7 @@ console.log(event['data'])
         inferSize={true}
         loading="eager"
         format="avif"
-      /> -->
-      <!-- <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-        {event.category}
-      </span> -->
+      />
       <h1
       class="text-white text-4xl lg:text-5xl font-bold lg:tracking-tight mt-8 lg:leading-tight">
       {event.data.title}
