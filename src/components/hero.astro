@@ -14,9 +14,9 @@ import Container from "./container.astro";
   <Container>
 
     <!-- col 1 -->
-    <div class="flex flex-col place-content-center p-20 w-1/2">
+    <div class="flex flex-col place-content-center md:p-20 p-8 md:w-1/2 w-full">
       <p
-        class="text-white text-mingo-text text-sm font-medium font-body tracking-widest uppercase"
+        class="text-mingo-text text-sm font-medium font-body tracking-widest uppercase"
       >the web3 ticketing solution</p>
       <h1
         class="text-5xl text-white text-transform font-display lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
@@ -45,7 +45,7 @@ import Container from "./container.astro";
     </div>
     
     <!-- col 2 -->
-    <div class="flex flex-col place-content-center p-20 w-1/2">
+    <div class="sm:flex flex-col place-content-center hidden p-20">
       <Picture
         src={heroImage}
         alt="Astronaut in the air"

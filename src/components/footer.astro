@@ -7,7 +7,7 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div class="mt-8 bg-mingo-dark pt-9">
-  <div class="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
+  <div class="mx-auto sm:w-full sm:max-w-[1166px] px-6 xl:px-0">
 
     <!-- Columns -->
     <div class="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
@@ -70,7 +70,7 @@ import { Icon } from "astro-icon/components";
       </div>
 
       <!-- Col 2 -->
-      <div class="md:w-80">
+      <div class="md:w-80 pt-4 xs:pt-0">
           <p class="text-white text-sm font-semibold">Features</p>
           <ul>
             <li class="mt-[15px]">
@@ -117,7 +117,7 @@ import { Icon } from "astro-icon/components";
       </div>
 
       <!-- Col 3 -->
-      <div class="md:w-80">
+      <div class="md:w-80 pt-4 xs:pt-0">
         <p class="text-white text-sm font-semibold pb-4">Address</p>
         <p class="text-mingo-text-nav text-sm pb-6">
           Mingo Ventures LLC, First Floor, SVG Teachers Credit Union Uptown Building, Corner of James & Middle Street Kingston P.O. St. Vincent & the Grenadines
@@ -137,9 +137,9 @@ import { Icon } from "astro-icon/components";
       </div>
 
       <!-- Col 4 -->
-      <div class="md:w-80 px-10">
-          <p class="text-white text-sm font-semibold pb-4">Download the app</p>
-          <div class="flex gap-4 sm:flex-col">
+      <div class="md:w-80 xs:px-10 py-6">
+          <p class="text-white text-sm font-semibold xs:pb-4 pb-2">Download the app</p>
+          <div class="flex gap-4 flex-col">
             <Image src={playstore} alt="Mingo Logo" class="w-40" />
             <Image src={appstore} alt="Mingo Logo" class="w-40" />
           </div>

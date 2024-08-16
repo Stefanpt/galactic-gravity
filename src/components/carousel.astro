@@ -4,29 +4,31 @@ import { Picture } from 'astro:assets';
 import 'flickity/dist/flickity.min.css'
 ---
 
-<div class="main-carousel mx-16">
+<div class="main-carousel md:mx-10 mx-6">
     {
         items.map((item, index)=>(
-            <div class="carousel-cell w-1/4 mr-3">
-                <Picture
-                    src={item.data.image.src}
-                    alt={item.data.image.alt}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    width={800}
-                    height={600}
-                    loading={index <= 2 ? "eager" : "lazy"}
-                    decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full object-cover object-center bg-white"
-                />
-                <p class="text-mingo-text text-md truncate">{item.data.title}</p>
-                <p class="text-gray-300 text-sm">{item.data.location}</p>
-                <time
-                    class="text-gray-300 text-sm"
-                    datetime={item.data.publishDate.toISOString()}
-                >
-                    {item.data.publishDate.toDateString()}
-                </time>
-            </div>  
+            <div class="carousel-cell md:w-1/4 w-full mr-3">
+                <a href={`/event/${item.slug}`}>
+                    <Picture
+                        src={item.data.image.src}
+                        alt={item.data.image.alt}
+                        sizes="(max-width: 800px) 100vw, 800px"
+                        width={800}
+                        height={600}
+                        loading={index <= 2 ? "eager" : "lazy"}
+                        decoding={index <= 2 ? "sync" : "async"}
+                        class="w-full object-cover object-center bg-white"
+                    />
+                    <p class="text-mingo-text text-md truncate">{item.data.title}</p>
+                    <p class="text-gray-300 text-sm">{item.data.location}</p>
+                    <time
+                        class="text-gray-300 text-sm"
+                        datetime={item.data.publishDate.toISOString()}
+                    >
+                        {item.data.publishDate.toDateString()}
+                    </time>
+                </a>
+            </div>
         ))
     }
 </div>

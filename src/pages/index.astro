@@ -21,9 +21,9 @@ const publishedEvents = await getCollection("event", ({ data }) => {
     <Hero />
     <CategoriesSmall />
 
-    <main class="mt-32">
+    <main class="md:mt-20 mt-6">
 
-        <div class="max-w-6xl mx-auto">
+        <div class="mx-auto">
             <Carousel items={publishedEvents} />
         </div>
 

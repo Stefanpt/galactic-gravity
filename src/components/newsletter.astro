@@ -8,10 +8,12 @@ import Button from "@components/ui/button.astro";
 ---
 
 <div
-  class="bg-mingo-grey mt-20 mx-12 rounded-lg flex flex-row items-center text-center">
+  class="bg-mingo-grey md:mt-20 mt-8 md:mx-12 mx-6 rounded-lg flex  text-center">
+
+  <div class="flex max-w-7xl mx-auto md:flex-row flex-col">
 
     <!-- col 1 -->
-    <div class="flex flex-col w-1/2 p-20 text-left gap-6 place-content-center">
+    <div class="flex flex-col md:w-1/2 md:p-20 p-10 max-sm:pb-0 text-left gap-6 place-content-center">
       <h2 class="font-extrabold text-3xl text-white">
         Keep up with the latest
       </h2>
@@ -21,16 +23,18 @@ import Button from "@components/ui/button.astro";
     </div>
 
     <!-- col 2 -->
-    <div class="flex flex-col w-1/2 px-20 place-content-center text-left">
+    <div class="flex flex-col md:w-1/2 w-full md:px-20 max-sm:p-10 pt-0 place-content-center text-left">
       <p class="text-white ">
         Subscribe to our newsletter
       </p>
 
       <!-- Form -->
-      <form action="" class="mx-auto flex md:w-full flex-col gap-3 sm:flex-row">
-        <input type="email" name="email" id="email" class="w-3/4 grow rounded-lg py-3 px-5 placeholder:text-black/30" placeholder="Enter your email" />
-        <button type="submit" class="w-1/4 bg-mingo-green rounded-lg text-sm text-white">Sign up</button>
+      <form action="" class="flex flex-col md:flex-row md:w-full gap-3">
+        <input type="email" name="email" id="email" class="md:w-2/3 grow rounded-lg py-3 px-5 placeholder:text-black/30" placeholder="Enter your email" />
+        <button type="submit" class="md:w-1/3 bg-mingo-green rounded-lg text-sm text-white py-3">Sign up</button>
       </form>
+
+    </div>
 
     </div>
 
